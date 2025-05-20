@@ -17,8 +17,7 @@ export default function CardComponent({ venueData }) {
       <Grid container spacing={2} justifyContent="flex-start">
         {venueData?.map((item, index) => (
           <Grid item key={index} xs={12} sm={6} md={4} lg={3} sx={{
-            display: 'flex', justifyContent: "flex-start", borderTopLeftRadius: '1rem',
-            borderTopRightRadius: "1rem",
+            display: 'flex', justifyContent: "flex-start",
           }}>
             {
               item?.type === "Inactive" ? (
@@ -29,10 +28,15 @@ export default function CardComponent({ venueData }) {
                     border: 'none',
                     boxShadow: 'none',
                     position: 'relative',
-                    opacity: 0.6
+                    opacity: 0.6,
+                    borderTopLeftRadius: '1rem',
+                    borderTopRightRadius: "1rem",
                   }}
                 >
-                  <CardActionArea sx={{ position: 'relative' }} >
+                  <CardActionArea sx={{
+                    position: 'relative', borderTopLeftRadius: '1rem',
+                    borderTopRightRadius: "1rem",
+                  }} >
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -109,9 +113,14 @@ export default function CardComponent({ venueData }) {
                     border: 'none',
                     boxShadow: 'none',
                     position: 'relative',
+                    borderTopLeftRadius: '1rem',
+                    borderTopRightRadius: "1rem",
                   }}
                 >
-                  <CardActionArea sx={{ position: 'relative' }} >
+                  <CardActionArea sx={{
+                    position: 'relative', borderTopLeftRadius: '1rem',
+                    borderTopRightRadius: "1rem",
+                  }} >
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
